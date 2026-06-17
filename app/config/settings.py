@@ -16,3 +16,7 @@ LANGSMITH_API_KEY = os.getenv(
 LANGSMITH_TRACING = os.getenv(
     "LANGSMITH_TRACING"
 )
+
+COHERE_API_KEY = os.getenv(
+    "COHERE_API_KEY"
+)

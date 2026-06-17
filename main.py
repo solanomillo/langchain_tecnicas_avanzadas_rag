@@ -1,3 +1,4 @@
+from app.chains.query_rewriter import crear_query_rewriter
 from app.loaders.pdf_loader import (
     cargar_documentos
 )
@@ -13,6 +14,25 @@ from app.processing.embeddings import (
 from app.vectorstores.faiss_store import (
     crear_vectorstore
 )
+
+from app.retrievers.retriever import (
+    crear_retriever
+)
+
+from app.models.gemini import (
+    cargar_llm
+)
+
+from app.models.cohere_model import (
+    obtener_llm_cohere
+)
+
+from app.chains.rag_chain import (
+    crear_rag_chain
+)
+from langchain_classic.globals import ( set_debug )
+
+set_debug(True)
 
 
 def main():
@@ -30,25 +50,34 @@ def main():
         embeddings
     )
 
-    print(
-        f"VectorStore creado con {len(chunks)} chunks"
+    retriever = crear_retriever(
+        vectorstore
     )
 
-    resultados = vectorstore.similarity_search(
-    "¿Cómo solicitar el seguro?",
-    k=3
+    llm = cargar_llm()
+    llm_optimizador =  obtener_llm_cohere()
+
+    rewriter = crear_query_rewriter(
+        llm_optimizador
     )
 
-    for i, doc in enumerate(resultados, start=1):
+    rag_chain = crear_rag_chain(
+        rewriter,
+        retriever,
+        llm
+    )
+    pregunta = (
+        "¿Cómo saco el seguro?"
+    )
 
-        print("\n")
-        print("=" * 50)
-        print(f"Resultado {i}")
-        print("=" * 50)
+    respuesta = rag_chain.invoke(
+        pregunta
+    )
 
-        print(
-            doc.page_content[:400]
-        )
+    print("\nRESPUESTA:\n")
+
+    print(respuesta)
+
 
 if __name__ == "__main__":
     main()

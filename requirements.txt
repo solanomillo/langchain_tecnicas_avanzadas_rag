@@ -10,3 +10,4 @@ langchain-text-splitters
 sentence-transformers
 langchain-huggingface
 faiss-cpu
+langchain-cohere

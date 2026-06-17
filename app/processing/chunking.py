@@ -8,7 +8,7 @@ from langchain_text_splitters import (
 def crear_chunks(documentos):
 
     tokenizer = AutoTokenizer.from_pretrained(
-        "bert-base-uncased" # BAAI/bge-m3 para produccion
+        "BAAI/bge-m3" # BAAI/bge-m3 para produccion
     )
 
     splitter = (
