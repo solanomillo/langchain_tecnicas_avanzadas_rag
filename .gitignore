@@ -1,0 +1,18 @@
+# Virtual Environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# Vector DB
+vector_db/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
