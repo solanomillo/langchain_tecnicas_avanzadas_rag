@@ -1,6 +1,6 @@
 # Advanced RAG Assistant
-
-![Python](https://img.shields.io/badge/Python-3.12-blue)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/solanomillo/Agentes_de_busqueda_IA/blob/main/Agentes_Langgraph_busquedas.ipynb)
+![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
 ![Google Gemini](https://img.shields.io/badge/Google-Gemini-orange)
 ![FAISS](https://img.shields.io/badge/FAISS-VectorStore-red)
@@ -9,6 +9,15 @@
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Embeddings-yellow)
 
 Sistema RAG (Retrieval-Augmented Generation) avanzado construido con LangChain, Gemini, Hugging Face Embeddings, FAISS y Cohere como LLM principal para consultas optimizadas. Este sistema proporciona respuestas precisas y contextualizadas mediante la combinación de búsqueda semántica y generación de lenguaje natural.
+
+## ▶️ Ejecución rápida en Google Colab
+
+1. Haz clic en el badge **Open in Colab**.
+2. Ejecuta todas las celdas desde **Runtime → Run all**.
+3. Explora los resultados directamente en el notebook.
+4. Haz una copia en tu Drive (File → Save a copy in Drive).
+
+> ✅ No se requiere instalación local ni configuración adicional.
 
 ## 🚀 Características
 
@@ -205,18 +214,14 @@ streamlit run streamlit_app.py
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abre un Pull Request
 
-## 📝 Licencia
+## 👨‍💻 Autor
+**Julio Solano**
+- 🔗 GitHub: [https://github.com/solanomillo](https://github.com/solanomillo)
+- 🔗 LinkedIn: [https://www.linkedin.com/in/julio-cesar-solano](https://www.linkedin.com/in/julio-cesar-solano)
+- 📧 Email: solanomillo144@gmail.com
 
-Distribuido bajo la licencia MIT. Ver `LICENSE` para más información.
+## 📄 Licencia
 
-## 👥 Autores
+Este proyecto se distribuye bajo la licencia **MIT**.
 
-- **Tu Nombre** - *Trabajo Inicial* - [TuGitHub](https://github.com/tuusuario)
-
-## 🙏 Agradecimientos
-
-- LangChain
-- Google AI Studio
-- Cohere
-- Hugging Face
-- Streamlit
+Desarrollado como proyecto de aprendizaje y experimentación.
