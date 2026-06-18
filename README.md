@@ -1,5 +1,5 @@
 # Advanced RAG Assistant
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/solanomillo/Agentes_de_busqueda_IA/blob/main/Agentes_Langgraph_busquedas.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/solanomillo/langchain_tecnicas_avanzadas_rag/blob/main/Tecnicas_avanzadas_rag.ipynb)
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
 ![Google Gemini](https://img.shields.io/badge/Google-Gemini-orange)
