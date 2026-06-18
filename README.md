@@ -104,7 +104,7 @@ advanced-rag-assistant/
 ### Clonar repositorio
 
 ```bash
-git clone https://github.com/tu_usuario/advanced-rag-assistant.git
+git clone https://github.com/solanomillo/langchain_tecnicas_avanzadas_rag.git
 ```
 
 ### Crear entorno virtual
