@@ -1,5 +1,4 @@
 import streamlit as st
-
 from app.services.rag_service import (
     inicializar_rag
 )
