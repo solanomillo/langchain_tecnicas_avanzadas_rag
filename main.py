@@ -1,61 +1,31 @@
-from app.services.vectorstore_service import (
-    inicializar_vectorstore
-)
+import streamlit as st
 
-from app.retrievers.retriever import (
-    crear_retriever
-)
-
-from app.models.gemini import (
-    cargar_llm
-)
-
-from app.models.cohere_model import (
-    obtener_llm_cohere
-)
-
-from app.chains.query_rewriter import (
-    crear_query_rewriter
-)
-
-from app.chains.rag_chain import (
-    crear_rag_chain
+from app.services.rag_service import (
+    inicializar_rag
 )
 
 
-def main():
+@st.cache_resource
+def cargar_rag():
 
-    vectorstore = (
-        inicializar_vectorstore()
-    )
+    return inicializar_rag()
 
-    retriever = crear_retriever(
-        vectorstore
-    )
 
-    llm = cargar_llm()
-    llm_cohere = obtener_llm_cohere()
+rag_chain = cargar_rag()
 
-    rewriter = crear_query_rewriter(
-        llm_cohere
-    )
+st.title(
+    "RAG Avanzado con Langchain"
+)
 
-    rag_chain = crear_rag_chain(
-        rewriter,
-        retriever,
-        llm
-    )
-
-    pregunta = (
-        "¿Cómo saco el seguro?"
-    )
+pregunta = st.chat_input(
+    "Haz una pregunta"
+)
+if pregunta:
 
     respuesta = rag_chain.invoke(
         pregunta
     )
 
-    print(respuesta)
-
-
-if __name__ == "__main__":
-    main()
+    st.write(
+        respuesta
+    )
